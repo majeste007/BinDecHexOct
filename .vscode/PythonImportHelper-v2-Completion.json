@@ -1,0 +1,431 @@
+[
+    {
+        "label": "tkinter",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "tkinter.messagebox",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tkinter.messagebox",
+        "description": "tkinter.messagebox",
+        "detail": "tkinter.messagebox",
+        "documentation": {}
+    },
+    {
+        "label": "de",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "de = 0x100\na = 124\nprint(int(de))\n\"\"\"\nprint(oct(de))\nprint(hex(de))\nprint(int(0b100))\n\"\"\"",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "a = 124\nprint(int(de))\n\"\"\"\nprint(oct(de))\nprint(hex(de))\nprint(int(0b100))\n\"\"\"",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "convert_from_decimal",
+        "kind": 2,
+        "importPath": "mainV1",
+        "description": "mainV1",
+        "peekOfCode": "def convert_from_decimal():\n    try:\n        entre = int(decimal_entry.get())\n        binary_label.config(text=\"Binaire : \" + bin(entre)[2:])\n        octal_label.config(text=\"Octal : \" + oct(entre)[2:])\n        hex_label.config(text=\"Hexadecimal : \" + hex(entre)[2:].upper())\n    except Exception:\n        raise tkm.showerror(\"Attention \", \"Veuillez donner un Entier\")\nwindow = tk.Tk()\nwindow.title(\"Convertisseur de nombres\")",
+        "detail": "mainV1",
+        "documentation": {}
+    },
+    {
+        "label": "window",
+        "kind": 5,
+        "importPath": "mainV1",
+        "description": "mainV1",
+        "peekOfCode": "window = tk.Tk()\nwindow.title(\"Convertisseur de nombres\")\nwindow.geometry(\"380x420\")\nwindow.resizable(False, False)\ndec_label = tk.Label(window, text=\"Entrez un nombre décimal: \")\ndec_label.pack()\ndecimal_entry = tk.Entry(window)\ndecimal_entry.pack()\nconvert_button = tk.Button(window, text=\"Convertir\", background=\"#fff\", command=convert_from_decimal)\nconvert_button.pack(padx=15, pady=15)",
+        "detail": "mainV1",
+        "documentation": {}
+    },
+    {
+        "label": "dec_label",
+        "kind": 5,
+        "importPath": "mainV1",
+        "description": "mainV1",
+        "peekOfCode": "dec_label = tk.Label(window, text=\"Entrez un nombre décimal: \")\ndec_label.pack()\ndecimal_entry = tk.Entry(window)\ndecimal_entry.pack()\nconvert_button = tk.Button(window, text=\"Convertir\", background=\"#fff\", command=convert_from_decimal)\nconvert_button.pack(padx=15, pady=15)\nbinary_label = tk.Label(window, text=\"Binaire : \")\nbinary_label.pack()\nhex_label = tk.Label(window, text=\"Hexadécimal : \")\nhex_label.pack()",
+        "detail": "mainV1",
+        "documentation": {}
+    },
+    {
+        "label": "decimal_entry",
+        "kind": 5,
+        "importPath": "mainV1",
+        "description": "mainV1",
+        "peekOfCode": "decimal_entry = tk.Entry(window)\ndecimal_entry.pack()\nconvert_button = tk.Button(window, text=\"Convertir\", background=\"#fff\", command=convert_from_decimal)\nconvert_button.pack(padx=15, pady=15)\nbinary_label = tk.Label(window, text=\"Binaire : \")\nbinary_label.pack()\nhex_label = tk.Label(window, text=\"Hexadécimal : \")\nhex_label.pack()\noctal_label = tk.Label(window, text=\"Octal : \")\noctal_label.pack()",
+        "detail": "mainV1",
+        "documentation": {}
+    },
+    {
+        "label": "convert_button",
+        "kind": 5,
+        "importPath": "mainV1",
+        "description": "mainV1",
+        "peekOfCode": "convert_button = tk.Button(window, text=\"Convertir\", background=\"#fff\", command=convert_from_decimal)\nconvert_button.pack(padx=15, pady=15)\nbinary_label = tk.Label(window, text=\"Binaire : \")\nbinary_label.pack()\nhex_label = tk.Label(window, text=\"Hexadécimal : \")\nhex_label.pack()\noctal_label = tk.Label(window, text=\"Octal : \")\noctal_label.pack()\nwindow.mainloop()",
+        "detail": "mainV1",
+        "documentation": {}
+    },
+    {
+        "label": "binary_label",
+        "kind": 5,
+        "importPath": "mainV1",
+        "description": "mainV1",
+        "peekOfCode": "binary_label = tk.Label(window, text=\"Binaire : \")\nbinary_label.pack()\nhex_label = tk.Label(window, text=\"Hexadécimal : \")\nhex_label.pack()\noctal_label = tk.Label(window, text=\"Octal : \")\noctal_label.pack()\nwindow.mainloop()",
+        "detail": "mainV1",
+        "documentation": {}
+    },
+    {
+        "label": "hex_label",
+        "kind": 5,
+        "importPath": "mainV1",
+        "description": "mainV1",
+        "peekOfCode": "hex_label = tk.Label(window, text=\"Hexadécimal : \")\nhex_label.pack()\noctal_label = tk.Label(window, text=\"Octal : \")\noctal_label.pack()\nwindow.mainloop()",
+        "detail": "mainV1",
+        "documentation": {}
+    },
+    {
+        "label": "octal_label",
+        "kind": 5,
+        "importPath": "mainV1",
+        "description": "mainV1",
+        "peekOfCode": "octal_label = tk.Label(window, text=\"Octal : \")\noctal_label.pack()\nwindow.mainloop()",
+        "detail": "mainV1",
+        "documentation": {}
+    },
+    {
+        "label": "convert_from_decimal",
+        "kind": 2,
+        "importPath": "mainV2",
+        "description": "mainV2",
+        "peekOfCode": "def convert_from_decimal():\n    entre = int(decimal_entry.get())\n    binary_label.config(text=\"Binaire : \" + bin(entre)[2:])\n    octal_label.config(text=\"Octal : \" + oct(entre)[2:])\n    hex_label.config(text=\"Hexadecimal : \" + hex(entre)[2:].upper())\ndef convert_from_bin():\n    entre = decimal_entry.get()\n    decimal_label.config(text=\"Decimal : \" + int(entre)[2:])\n    octal_label.config(text=\"Octal : \" + oct(entre)[2:])\n    hex_label.config(text=\"Hexadecimal : \" + hex(entre)[2:].upper())",
+        "detail": "mainV2",
+        "documentation": {}
+    },
+    {
+        "label": "convert_from_bin",
+        "kind": 2,
+        "importPath": "mainV2",
+        "description": "mainV2",
+        "peekOfCode": "def convert_from_bin():\n    entre = decimal_entry.get()\n    decimal_label.config(text=\"Decimal : \" + int(entre)[2:])\n    octal_label.config(text=\"Octal : \" + oct(entre)[2:])\n    hex_label.config(text=\"Hexadecimal : \" + hex(entre)[2:].upper())\nroot = tk.Tk()\nroot.title(\"Convertisseur de nombres\")\nroot.geometry(\"380x420\")\ndec_label = tk.Label(root, text=\"Entrez un nombre décimal: \")\ndec_label.pack()",
+        "detail": "mainV2",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "mainV2",
+        "description": "mainV2",
+        "peekOfCode": "root = tk.Tk()\nroot.title(\"Convertisseur de nombres\")\nroot.geometry(\"380x420\")\ndec_label = tk.Label(root, text=\"Entrez un nombre décimal: \")\ndec_label.pack()\ndecimal_entry = tk.Entry(root)\ndecimal_entry.pack()\nchoix = 2\nif choix==1:\n    convert_button = tk.Button(root, text=\"Convertir\", command=convert_from_decimal)",
+        "detail": "mainV2",
+        "documentation": {}
+    },
+    {
+        "label": "dec_label",
+        "kind": 5,
+        "importPath": "mainV2",
+        "description": "mainV2",
+        "peekOfCode": "dec_label = tk.Label(root, text=\"Entrez un nombre décimal: \")\ndec_label.pack()\ndecimal_entry = tk.Entry(root)\ndecimal_entry.pack()\nchoix = 2\nif choix==1:\n    convert_button = tk.Button(root, text=\"Convertir\", command=convert_from_decimal)\nelif choix ==2:\n    convert_button = tk.Button(root, text=\"Convertir\", command=convert_from_bin)\nconvert_button.pack()",
+        "detail": "mainV2",
+        "documentation": {}
+    },
+    {
+        "label": "decimal_entry",
+        "kind": 5,
+        "importPath": "mainV2",
+        "description": "mainV2",
+        "peekOfCode": "decimal_entry = tk.Entry(root)\ndecimal_entry.pack()\nchoix = 2\nif choix==1:\n    convert_button = tk.Button(root, text=\"Convertir\", command=convert_from_decimal)\nelif choix ==2:\n    convert_button = tk.Button(root, text=\"Convertir\", command=convert_from_bin)\nconvert_button.pack()\nbinary_label = tk.Label(root, text=\"Binaire:\")\nbinary_label.pack()",
+        "detail": "mainV2",
+        "documentation": {}
+    },
+    {
+        "label": "choix",
+        "kind": 5,
+        "importPath": "mainV2",
+        "description": "mainV2",
+        "peekOfCode": "choix = 2\nif choix==1:\n    convert_button = tk.Button(root, text=\"Convertir\", command=convert_from_decimal)\nelif choix ==2:\n    convert_button = tk.Button(root, text=\"Convertir\", command=convert_from_bin)\nconvert_button.pack()\nbinary_label = tk.Label(root, text=\"Binaire:\")\nbinary_label.pack()\ndecimal_label = Label(root, text=\"Decimal\")\ndecimal_label.pack()",
+        "detail": "mainV2",
+        "documentation": {}
+    },
+    {
+        "label": "binary_label",
+        "kind": 5,
+        "importPath": "mainV2",
+        "description": "mainV2",
+        "peekOfCode": "binary_label = tk.Label(root, text=\"Binaire:\")\nbinary_label.pack()\ndecimal_label = Label(root, text=\"Decimal\")\ndecimal_label.pack()\nhex_label = tk.Label(root, text=\"Hexadécimal:\")\nhex_label.pack()\noctal_label = tk.Label(root, text=\"Octal:\")\noctal_label.pack()\nroot.mainloop()",
+        "detail": "mainV2",
+        "documentation": {}
+    },
+    {
+        "label": "decimal_label",
+        "kind": 5,
+        "importPath": "mainV2",
+        "description": "mainV2",
+        "peekOfCode": "decimal_label = Label(root, text=\"Decimal\")\ndecimal_label.pack()\nhex_label = tk.Label(root, text=\"Hexadécimal:\")\nhex_label.pack()\noctal_label = tk.Label(root, text=\"Octal:\")\noctal_label.pack()\nroot.mainloop()",
+        "detail": "mainV2",
+        "documentation": {}
+    },
+    {
+        "label": "hex_label",
+        "kind": 5,
+        "importPath": "mainV2",
+        "description": "mainV2",
+        "peekOfCode": "hex_label = tk.Label(root, text=\"Hexadécimal:\")\nhex_label.pack()\noctal_label = tk.Label(root, text=\"Octal:\")\noctal_label.pack()\nroot.mainloop()",
+        "detail": "mainV2",
+        "documentation": {}
+    },
+    {
+        "label": "octal_label",
+        "kind": 5,
+        "importPath": "mainV2",
+        "description": "mainV2",
+        "peekOfCode": "octal_label = tk.Label(root, text=\"Octal:\")\noctal_label.pack()\nroot.mainloop()",
+        "detail": "mainV2",
+        "documentation": {}
+    },
+    {
+        "label": "convert_from_bin",
+        "kind": 2,
+        "importPath": "sandbox",
+        "description": "sandbox",
+        "peekOfCode": "def convert_from_bin():\n    entre = int(decimal_entry.get())\n    decimal_label.config(text=\"Decimal : \" + bin(entre)[2:])\n    octal_label.config(text=\"Octal : \" + oct(entre)[2:])\n    hex_label.config(text=\"Hexadecimal : \" + hex(entre)[2:].upper())\ndef convert_from_hex():\n    entre = int(decimal_entry.get())\n    binary_label.config(text=\"Binaire : \" + bin(entre)[2:])\n    octal_label.config(text=\"Octal : \" + oct(entre)[2:])\n    hex_label.config(text=\"Hexadecimal : \" + hex(entre)[2:].upper())",
+        "detail": "sandbox",
+        "documentation": {}
+    },
+    {
+        "label": "convert_from_hex",
+        "kind": 2,
+        "importPath": "sandbox",
+        "description": "sandbox",
+        "peekOfCode": "def convert_from_hex():\n    entre = int(decimal_entry.get())\n    binary_label.config(text=\"Binaire : \" + bin(entre)[2:])\n    octal_label.config(text=\"Octal : \" + oct(entre)[2:])\n    hex_label.config(text=\"Hexadecimal : \" + hex(entre)[2:].upper())\ndef convert_from_oct():\n    entre = int(decimal_entry.get())\n    binary_label.config(text=\"Binaire : \" + bin(entre)[2:])\n    octal_label.config(text=\"Octal : \" + oct(entre)[2:])\n    hex_label.config(text=\"Hexadecimal : \" + hex(entre)[2:].upper())",
+        "detail": "sandbox",
+        "documentation": {}
+    },
+    {
+        "label": "convert_from_oct",
+        "kind": 2,
+        "importPath": "sandbox",
+        "description": "sandbox",
+        "peekOfCode": "def convert_from_oct():\n    entre = int(decimal_entry.get())\n    binary_label.config(text=\"Binaire : \" + bin(entre)[2:])\n    octal_label.config(text=\"Octal : \" + oct(entre)[2:])\n    hex_label.config(text=\"Hexadecimal : \" + hex(entre)[2:].upper())",
+        "detail": "sandbox",
+        "documentation": {}
+    },
+    {
+        "label": "convert",
+        "kind": 2,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "def convert():\n    decimal_number = int(decimal_entry.get())\n    binary_number = bin(decimal_number)[2:]\n    octal_number = oct(decimal_number)[2:]\n    hex_number = hex(decimal_number)[2:].upper()\n    binary_label.config(text=\"Binaire: \" + binary_number)\n    octal_label.config(text=\"Octal: \" + octal_number)\n    hex_label.config(text=\"Hexadécimal: \" + hex_number)\nroot = tk.Tk()\nroot.title(\"Convertisseur de nombres\")",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "root = tk.Tk()\nroot.title(\"Convertisseur de nombres\")\ndecimal_label = tk.Label(root, text=\"Entrez un nombre décimal:\")\ndecimal_label.pack()\ndecimal_entry = tk.Entry(root)\ndecimal_entry.pack()\nconvert_button = tk.Button(root, text=\"Convertir\", command=convert)\nconvert_button.pack()\nbinary_label = tk.Label(root, text=\"Binaire:\")\nbinary_label.pack()",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "decimal_label",
+        "kind": 5,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "decimal_label = tk.Label(root, text=\"Entrez un nombre décimal:\")\ndecimal_label.pack()\ndecimal_entry = tk.Entry(root)\ndecimal_entry.pack()\nconvert_button = tk.Button(root, text=\"Convertir\", command=convert)\nconvert_button.pack()\nbinary_label = tk.Label(root, text=\"Binaire:\")\nbinary_label.pack()\noctal_label = tk.Label(root, text=\"Octal:\")\noctal_label.pack()",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "decimal_entry",
+        "kind": 5,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "decimal_entry = tk.Entry(root)\ndecimal_entry.pack()\nconvert_button = tk.Button(root, text=\"Convertir\", command=convert)\nconvert_button.pack()\nbinary_label = tk.Label(root, text=\"Binaire:\")\nbinary_label.pack()\noctal_label = tk.Label(root, text=\"Octal:\")\noctal_label.pack()\nhex_label = tk.Label(root, text=\"Hexadécimal:\")\nhex_label.pack()",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "convert_button",
+        "kind": 5,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "convert_button = tk.Button(root, text=\"Convertir\", command=convert)\nconvert_button.pack()\nbinary_label = tk.Label(root, text=\"Binaire:\")\nbinary_label.pack()\noctal_label = tk.Label(root, text=\"Octal:\")\noctal_label.pack()\nhex_label = tk.Label(root, text=\"Hexadécimal:\")\nhex_label.pack()\nroot.mainloop()",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "binary_label",
+        "kind": 5,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "binary_label = tk.Label(root, text=\"Binaire:\")\nbinary_label.pack()\noctal_label = tk.Label(root, text=\"Octal:\")\noctal_label.pack()\nhex_label = tk.Label(root, text=\"Hexadécimal:\")\nhex_label.pack()\nroot.mainloop()",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "octal_label",
+        "kind": 5,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "octal_label = tk.Label(root, text=\"Octal:\")\noctal_label.pack()\nhex_label = tk.Label(root, text=\"Hexadécimal:\")\nhex_label.pack()\nroot.mainloop()",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "hex_label",
+        "kind": 5,
+        "importPath": "test1",
+        "description": "test1",
+        "peekOfCode": "hex_label = tk.Label(root, text=\"Hexadécimal:\")\nhex_label.pack()\nroot.mainloop()",
+        "detail": "test1",
+        "documentation": {}
+    },
+    {
+        "label": "convert",
+        "kind": 2,
+        "importPath": "test2",
+        "description": "test2",
+        "peekOfCode": "def convert():\n    decimal_number = int(decimal_entry.get())\n    if conversion_option.get() == 0:\n        binary_number = bin(decimal_number)[2:]\n        octal_number = oct(decimal_number)[2:]\n        hex_number = hex(decimal_number)[2:].upper()\n    elif conversion_option.get() == 1:\n        binary_number = bin(decimal_number)[2:]\n        octal_number = oct(decimal_number)[2:]\n        hex_number = hex(decimal_number)[2:].upper()",
+        "detail": "test2",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "test2",
+        "description": "test2",
+        "peekOfCode": "root = tk.Tk()\nroot.title(\"Convertisseur de nombres\")\ndecimal_label = tk.Label(root, text=\"Entrez un nombre décimal:\")\ndecimal_label.pack()\ndecimal_entry = tk.Entry(root)\ndecimal_entry.pack()\nconversion_option = tk.IntVar()\ndecimal_radio = tk.Radiobutton(root, text=\"Decimal\", variable=conversion_option, value=0)\ndecimal_radio.pack()\nbinary_radio = tk.Radiobutton(root, text=\"Binaire\", variable=conversion_option, value=1)",
+        "detail": "test2",
+        "documentation": {}
+    },
+    {
+        "label": "decimal_label",
+        "kind": 5,
+        "importPath": "test2",
+        "description": "test2",
+        "peekOfCode": "decimal_label = tk.Label(root, text=\"Entrez un nombre décimal:\")\ndecimal_label.pack()\ndecimal_entry = tk.Entry(root)\ndecimal_entry.pack()\nconversion_option = tk.IntVar()\ndecimal_radio = tk.Radiobutton(root, text=\"Decimal\", variable=conversion_option, value=0)\ndecimal_radio.pack()\nbinary_radio = tk.Radiobutton(root, text=\"Binaire\", variable=conversion_option, value=1)\nbinary_radio.pack()\nhex_radio = tk.Radiobutton(root, text=\"Hexadécimal\", variable=conversion_option, value=2)",
+        "detail": "test2",
+        "documentation": {}
+    },
+    {
+        "label": "decimal_entry",
+        "kind": 5,
+        "importPath": "test2",
+        "description": "test2",
+        "peekOfCode": "decimal_entry = tk.Entry(root)\ndecimal_entry.pack()\nconversion_option = tk.IntVar()\ndecimal_radio = tk.Radiobutton(root, text=\"Decimal\", variable=conversion_option, value=0)\ndecimal_radio.pack()\nbinary_radio = tk.Radiobutton(root, text=\"Binaire\", variable=conversion_option, value=1)\nbinary_radio.pack()\nhex_radio = tk.Radiobutton(root, text=\"Hexadécimal\", variable=conversion_option, value=2)\nhex_radio.pack()\nconvert_button = tk.Button(root, text=\"Convertir\", command=convert)",
+        "detail": "test2",
+        "documentation": {}
+    },
+    {
+        "label": "conversion_option",
+        "kind": 5,
+        "importPath": "test2",
+        "description": "test2",
+        "peekOfCode": "conversion_option = tk.IntVar()\ndecimal_radio = tk.Radiobutton(root, text=\"Decimal\", variable=conversion_option, value=0)\ndecimal_radio.pack()\nbinary_radio = tk.Radiobutton(root, text=\"Binaire\", variable=conversion_option, value=1)\nbinary_radio.pack()\nhex_radio = tk.Radiobutton(root, text=\"Hexadécimal\", variable=conversion_option, value=2)\nhex_radio.pack()\nconvert_button = tk.Button(root, text=\"Convertir\", command=convert)\nconvert_button.pack()\nbinary_label = tk.Label(root, text=\"Binaire:\")",
+        "detail": "test2",
+        "documentation": {}
+    },
+    {
+        "label": "decimal_radio",
+        "kind": 5,
+        "importPath": "test2",
+        "description": "test2",
+        "peekOfCode": "decimal_radio = tk.Radiobutton(root, text=\"Decimal\", variable=conversion_option, value=0)\ndecimal_radio.pack()\nbinary_radio = tk.Radiobutton(root, text=\"Binaire\", variable=conversion_option, value=1)\nbinary_radio.pack()\nhex_radio = tk.Radiobutton(root, text=\"Hexadécimal\", variable=conversion_option, value=2)\nhex_radio.pack()\nconvert_button = tk.Button(root, text=\"Convertir\", command=convert)\nconvert_button.pack()\nbinary_label = tk.Label(root, text=\"Binaire:\")\nbinary_label.pack()",
+        "detail": "test2",
+        "documentation": {}
+    },
+    {
+        "label": "binary_radio",
+        "kind": 5,
+        "importPath": "test2",
+        "description": "test2",
+        "peekOfCode": "binary_radio = tk.Radiobutton(root, text=\"Binaire\", variable=conversion_option, value=1)\nbinary_radio.pack()\nhex_radio = tk.Radiobutton(root, text=\"Hexadécimal\", variable=conversion_option, value=2)\nhex_radio.pack()\nconvert_button = tk.Button(root, text=\"Convertir\", command=convert)\nconvert_button.pack()\nbinary_label = tk.Label(root, text=\"Binaire:\")\nbinary_label.pack()\noctal_label = tk.Label(root, text=\"Octal:\")\noctal_label.pack()",
+        "detail": "test2",
+        "documentation": {}
+    },
+    {
+        "label": "hex_radio",
+        "kind": 5,
+        "importPath": "test2",
+        "description": "test2",
+        "peekOfCode": "hex_radio = tk.Radiobutton(root, text=\"Hexadécimal\", variable=conversion_option, value=2)\nhex_radio.pack()\nconvert_button = tk.Button(root, text=\"Convertir\", command=convert)\nconvert_button.pack()\nbinary_label = tk.Label(root, text=\"Binaire:\")\nbinary_label.pack()\noctal_label = tk.Label(root, text=\"Octal:\")\noctal_label.pack()\nhex_label = tk.Label(root, text=\"Hexadécimal:\")\nhex_label.pack()",
+        "detail": "test2",
+        "documentation": {}
+    },
+    {
+        "label": "convert_button",
+        "kind": 5,
+        "importPath": "test2",
+        "description": "test2",
+        "peekOfCode": "convert_button = tk.Button(root, text=\"Convertir\", command=convert)\nconvert_button.pack()\nbinary_label = tk.Label(root, text=\"Binaire:\")\nbinary_label.pack()\noctal_label = tk.Label(root, text=\"Octal:\")\noctal_label.pack()\nhex_label = tk.Label(root, text=\"Hexadécimal:\")\nhex_label.pack()\nroot.mainloop()",
+        "detail": "test2",
+        "documentation": {}
+    },
+    {
+        "label": "binary_label",
+        "kind": 5,
+        "importPath": "test2",
+        "description": "test2",
+        "peekOfCode": "binary_label = tk.Label(root, text=\"Binaire:\")\nbinary_label.pack()\noctal_label = tk.Label(root, text=\"Octal:\")\noctal_label.pack()\nhex_label = tk.Label(root, text=\"Hexadécimal:\")\nhex_label.pack()\nroot.mainloop()",
+        "detail": "test2",
+        "documentation": {}
+    },
+    {
+        "label": "octal_label",
+        "kind": 5,
+        "importPath": "test2",
+        "description": "test2",
+        "peekOfCode": "octal_label = tk.Label(root, text=\"Octal:\")\noctal_label.pack()\nhex_label = tk.Label(root, text=\"Hexadécimal:\")\nhex_label.pack()\nroot.mainloop()",
+        "detail": "test2",
+        "documentation": {}
+    },
+    {
+        "label": "hex_label",
+        "kind": 5,
+        "importPath": "test2",
+        "description": "test2",
+        "peekOfCode": "hex_label = tk.Label(root, text=\"Hexadécimal:\")\nhex_label.pack()\nroot.mainloop()",
+        "detail": "test2",
+        "documentation": {}
+    }
+]

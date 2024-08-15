@@ -1,0 +1,457 @@
+import tkinter as tk
+
+def additionner():
+    # Récupération des valeurs en entrée
+    binaire1 = entree1.get()
+    binaire2 = entree2.get()
+
+    # Addition des deux nombres
+    result = binaire1 + binaire2
+
+    # Affichage du résultat
+    sortie.config(text=f"{result}")
+
+def multiplier():
+    # Récupération des valeurs en entrée
+    binaire1 = entree1.get()
+    binaire2 = entree2.get()
+
+    # Multiplication des deux nombres
+    result = binaire1 * binaire2
+
+    # Affichage du résultat
+    sortie.config(text=f"{result}")
+
+def soustraire():
+    # Récupération des valeurs en entrée
+    binaire1 = entree1.get()
+    binaire2 = entree2.get()
+
+    # Soustraction des deux nombres
+    result = binaire1 - binaire2
+
+    # Affichage du résultat
+    sortie.config(text=f"{result}")
+
+def diviser():
+    # Récupération des valeurs en entrée
+    binaire1 = entree1.get()
+    binaire2 = entree2.get()
+
+    # Division des deux nombres
+    result = binaire1 / binaire2
+
+    # Affichage du résultat
+    sortie.config(text=f"{result}")
+
+# Création de la fenêtre principale
+fenetre = tk.Tk()
+
+# Création des champs d'entrée
+entree1 = tk.Entry(fenetre)
+entree1.pack()
+entree2 = tk.Entry(fenetre)
+entree2.pack()
+
+# Création des boutons
+bouton_addition = tk.Button(fenetre, text="Additionner", command=additionner)
+bouton_addition.pack()
+bouton_multiplication = tk.Button(fenetre, text="Multiplier", command=multiplier)
+bouton_multiplication.pack()
+bouton_soustraction = tk.Button(fenetre, text="Soustraire", command=soustraire)
+bouton_soustraction.pack()
+bouton_division = tk.Button(fenetre, text="Diviser", command=diviser)
+bouton_division.pack()
+
+# Création du champ de sortie
+sortie = tk.Label(fenetre)
+sortie.pack()
+
+# Lancement de la fenêtre
+fenetre.mainloop()
+#######################################################################
+import tkinter as tk
+
+def calculer():
+    # Récupération des valeurs en entrée
+    expression = expression_entree.get()
+
+    # Conversion de l'expression en une liste de nombres et d'opérations
+    expression_liste = expression.split(" ")
+
+    # Résolution de l'expression
+    result = eval(expression_liste)
+
+    # Conversion du résultat en base n
+    result_binaire = bin(result).replace("0b", "")
+
+    # Affichage du résultat
+    sortie.config(text=f"{result_binaire}")
+
+# Création de la fenêtre principale
+fenetre = tk.Tk()
+
+# Création du champ d'entrée
+expression_entree = tk.Entry(fenetre)
+expression_entree.pack()
+
+# Création du bouton de calcul
+bouton_calcul = tk.Button(fenetre, text="Calculer", command=calculer)
+bouton_calcul.pack()
+
+# Création du champ de sortie
+sortie = tk.Label(fenetre)
+sortie.pack()
+
+# Lancement de la fenêtre
+fenetre.mainloop()
+################################""
+import tkinter as tk
+
+def calculer():
+    # Récupération de l'expression en entrée
+    expression = expression_entree.get()
+
+    # Conversion de l'expression en une liste de nombres et d'opérateurs
+    expression_liste = expression.split(" ")
+
+    # Calcul de l'expression
+    result = calcul_expression(expression_liste)
+
+    # Affichage du résultat
+    sortie.config(text=f"{result}")
+
+def calcul_expression(expression_liste):
+    # Pile pour stocker les nombres
+    pile = []
+
+    # Itération sur l'expression
+    for element in expression_liste:
+        # Si l'élément est un nombre, le placer sur la pile
+        if element.isdigit():
+            pile.append(int(element, base_entree.get()))
+        # Sinon, effectuer l'opération appropriée
+        else:
+            # Récupération des deux nombres de la pile
+            nombre1 = pile.pop()
+            nombre2 = pile.pop()
+
+            # Opération
+            if element == "+":
+                result = nombre1 + nombre2
+            elif element == "-":
+                result = nombre1 - nombre2
+            elif element == "*":
+                result = nombre1 * nombre2
+            elif element == "/":
+                result = nombre1 // nombre2
+
+            # Placer le résultat sur la pile
+            pile.append(result)
+
+    # Renvoyer le résultat final
+    return pile.pop()
+
+# Création de la fenêtre principale
+fenetre = tk.Tk()
+
+# Création du champ d'entrée
+expression_entree = tk.Entry(fenetre)
+expression_entree.pack()
+
+# Création du bouton de calcul
+bouton_calcul = tk.Button(fenetre, text="Calculer", command=calculer)
+bouton_calcul.pack()
+
+# Création du champ de sortie
+sortie = tk.Label(fenetre)
+sortie.pack()
+
+# Lancement de la fenêtre
+fenetre.mainloop()
+########################"
+import tkinter as tk
+
+def calculer():
+    # Récupération de l'expression
+    expression = expression_entree.get()
+
+    # Affichage du résultat
+    sortie.config(text=f"{eval(expression)}")
+
+# Création de la fenêtre principale
+fenetre = tk.Tk()
+
+# Création du champ d'entrée
+expression_entree = tk.Entry(fenetre)
+expression_entree.pack()
+
+# Création du bouton de calcul
+bouton_calcul = tk.Button(fenetre, text="Calculer", command=calculer)
+bouton_calcul.pack()
+
+# Création du champ de sortie
+sortie = tk.Label(fenetre)
+sortie.pack()
+
+# Lancement de la fenêtre
+fenetre.mainloop()
+######################################
+def convertir_reel_binaire(reel):
+    # Récupération de la partie entière du réel
+    entier = int(reel)
+
+    # Conversion de la partie entière en binaire
+    binaire_entier = bin(entier).replace("0b", "")
+
+    # Récupération de la partie fractionnaire du réel
+    fraction = reel - entier
+
+    # Conversion de la partie fractionnaire en binaire
+    binaire_fraction = ""
+    for i in range(1, 100):
+        fraction *= 2
+        if fraction >= 1:
+            binaire_fraction += "1"
+            fraction -= 1
+        else:
+            binaire_fraction += "0"
+
+    # Assemblage des deux parties
+    binaire = binaire_entier + "." + binaire_fraction
+
+    # Suppression des zéros inutiles en début de partie fractionnaire
+    while binaire[0] == "0":
+        binaire = binaire[1:]
+
+    return binaire
+
+# Exemple d'utilisation
+reel = 1.5
+binaire = convertir_reel_binaire(reel)
+print(binaire)
+{############################
+def convertir_reel_binaire(reel):
+    # Récupération de la partie entière du réel
+    partie_entiere = int(reel)
+
+    # Conversion de la partie entière en binaire
+    partie_entiere_binaire = bin(partie_entiere).replace("0b", "")
+
+    # Récupération de la partie fractionnaire du réel
+    partie_fractionnaire = reel - partie_entiere
+
+    # Conversion de la partie fractionnaire en binaire
+    partie_fractionnaire_binaire = "0."
+    while partie_fractionnaire > 0:
+        partie_fractionnaire *= 2
+        if partie_fractionnaire >= 1:
+            partie_fractionnaire_binaire += "1"
+            partie_fractionnaire -= 1
+        else:
+            partie_fractionnaire_binaire += "0"
+
+    # Affichage du résultat
+    return partie_entiere_binaire + partie_fractionnaire_binaire
+
+# Exemple d'utilisation
+reel = 1.125
+print(convertir_reel_binaire(reel))
+{##########################################
+def convertir_reel_binaire(reel):
+    # Récupération de la partie entière
+    entier = int(reel)
+
+    # Récupération de la partie fractionnaire
+    decimal = reel - entier
+
+    # Conversion de la partie entière en binaire
+    binaire_entier = bin(entier).replace("0b", "")
+
+    # Conversion de la partie fractionnaire en binaire
+    binaire_fractionnaire = "0."
+    while decimal != 0:
+        decimal = decimal * 2
+        binaire_fractionnaire += str(int(decimal))
+        decimal = decimal - int(decimal)
+
+    # Assemblage des deux parties
+    binaire = binaire_entier + binaire_fractionnaire
+
+    # Suppression des zéros inutiles en début de chaîne
+    binaire = binaire.lstrip("0")
+
+    return binaire
+
+# Exemple d'utilisation
+reel = 1.25
+print(convertir_reel_binaire(reel))
+#################def convertir_decimal_negatif_binaire(decimal):
+    # Conversion du nombre en binaire positif
+    binaire = bin(decimal).replace("0b", "")
+
+    # Inversion du bit de signe
+    binaire = binaire[1:]
+    binaire = binaire[::-1]
+    binaire = "1" + binaire
+
+    # Suppression des zéros inutiles en début de chaîne
+    binaire = binaire.lstrip("0")
+
+    return binaire
+
+# Exemple d'utilisation
+decimal = -12
+print(convertir_decimal_negatif_binaire(decimal))
+{{{{{{{{{{{{{{{{{{{{{
+
+def convertir_decimal_negatif_binaire(decimal):
+    # Conversion du nombre en positif
+    decimal = decimal + abs(decimal)
+
+    # Conversion du nombre en binaire
+    binaire = bin(decimal).replace("0b", "")
+
+    # Ajout d'un signe négatif
+    binaire = "-" + binaire
+
+    return binaire
+
+# Exemple d'utilisation
+decimal = -12.345
+print(convertir_decimal_negatif_binaire(decimal))
+ {###########################
+def convertir_decimal_negatif_binaire(decimal):
+    # Conversion du nombre en binaire positif
+    binaire = bin(decimal).replace("0b", "")
+
+    # Inversion des bits
+    binaire = binaire[::-1]
+
+    # Ajout d'un 1 en début
+    binaire = "1" + binaire
+
+    # Suppression des zéros inutiles en début de chaîne
+    binaire = binaire.lstrip("0")
+
+    return binaire
+
+# Exemple d'utilisation
+decimal = -12
+print(convertir_decimal_negatif_binaire(decimal))
+######################
+def convertir_decimal_negatif_binaire(decimal):
+    # Conversion du nombre en binaire positif
+    binaire = bin(decimal).replace("0b", "")
+
+    # Ajout d'un 1 en début
+    binaire = "1" + binaire[1:]
+
+    # Suppression des zéros inutiles en début de chaîne
+    binaire = binaire.lstrip("0")
+
+    return binaire
+
+# Exemple d'utilisation
+decimal = -12
+print(convertir_decimal_negatif_binaire(decimal))
+###################################################
+def convertir_reel_hexadecimal(reel):
+    # Récupération de la partie entière
+    entier = int(reel)
+
+    # Récupération de la partie fractionnaire
+    decimal = reel - entier
+
+    # Conversion de la partie entière en hexadécimal
+    hexadecimal_entier = hex(entier).replace("0x", "")
+
+    # Conversion de la partie fractionnaire en hexadécimal
+    hexadecimal_fractionnaire = "0."
+    while decimal != 0:
+        decimal = decimal * 16
+        hexadecimal_fractionnaire += str(int(decimal))
+        decimal = decimal - int(decimal)
+
+    # Assemblage des deux parties
+    hexadecimal = hexadecimal_entier + hexadecimal_fractionnaire
+
+    # Suppression des zéros inutiles en début de chaîne
+    hexadecimal = hexadecimal.lstrip("0")
+
+    return hexadecimal
+
+# Exemple d'utilisation
+reel = 1.25
+print(convertir_reel_hexadecimal(reel))
+################################################
+def convertir_reel_hexadecimal(reel):
+    # Récupération de la partie entière
+    entier = int(reel)
+
+    # Récupération de la partie fractionnaire
+    decimal = reel - entier
+
+    # Conversion de la partie entière en hexadécimal
+    hexadecimal_entier = hex(entier).replace("0x", "")
+
+    # Conversion de la partie fractionnaire en hexadécimal
+    hexadecimal_fractionnaire = "0."
+    while decimal != 0:
+        decimal = decimal * 16
+        hexadecimal_fractionnaire += str(hex(int(decimal))[2:]).upper()
+        decimal = decimal - int(decimal)
+
+    # Assemblage des deux parties
+    hexadecimal = hexadecimal_entier + hexadecimal_fractionnaire
+
+    # Suppression des zéros inutiles en début de chaîne
+    hexadecimal = hexadecimal.lstrip("0")
+
+    return hexadecimal
+
+# Exemple d'utilisation
+reel = 1.25
+print(convertir_reel_hexadecimal(reel))
+{############################################################
+def convertir_reel_hexadecimal(reel):
+    # Récupération de la partie entière
+    entier = int(reel)
+
+    # Récupération de la partie fractionnaire
+    decimal = reel - entier
+
+    # Conversion de la partie entière en hexadécimal
+    hexadecimal_entier = hex(entier).replace("0x", "")
+
+    # Conversion de la partie fractionnaire en hexadécimal
+    hexadecimal_fractionnaire = "0."
+    while decimal != 0:
+        decimal = decimal * 16
+        hexadecimal_fractionnaire += str(int(decimal))
+        decimal = decimal - int(decimal)
+
+    # Assemblage des deux parties
+    hexadecimal = hexadecimal_entier + hexadecimal_fractionnaire
+
+    # Suppression des zéros inutiles en début de chaîne
+    hexadecimal = hexadecimal.lstrip("0")
+
+    return hexadecimal
+
+# Exemple d'utilisation
+reel = 1.25
+print(convertir_reel_hexadecimal(reel))
+#########################
+def convertir_reel_hexadecimal(reel):
+    # Conversion du nombre en binaire
+    binaire = bin(reel).replace("0b", "")
+
+    # Conversion du binaire en hexadécimal
+    hexadecimal = binaire.hex().lstrip("0x")
+
+    return hexadecimal
+
+# Exemple d'utilisation
+reel = 1.25
+print(convertir_reel_hexadecimal(reel))
